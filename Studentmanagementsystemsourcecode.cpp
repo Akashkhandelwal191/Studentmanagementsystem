@@ -19,13 +19,12 @@ class Student
  string user;//Admin name
  string sessionid,pass;//Admin id,password
  int admno,std;
- char name[20];
- char gender;
- string Department,Email;
+ char name[20],gender,Email[100];
+ string Department;
  string currentid;
  float marks;
  float percentage;
- string username;//temporary variable for hoding username
+ string username;//temporary variable for holding username
  public:
   //function declaration:
   void accountinfo();//Admin accountinfo
@@ -126,6 +125,7 @@ void Student::admin()//Login validation userlogin page:-
   fin.close();
   if(flag>0)
    {
+    system("cls"); 
     cout<<"\n \n \n .........You are redirected to main menu Wait:.........................";
     cout<<"\n\n";
     for(int i=0;i<=50;i++)
@@ -196,11 +196,11 @@ else if(press==2)
   sessionid=local;
   cout<<"\t\t\t\t\t\t\t\t\nEnter your name:";
   cin>>user;
-  cout<<"\t\t\t\t\t\t\t\t\nEnter your gender:";
+  cout<<"\t\t\t\t\t\t\t\t\nEnter your gender(M/F):";
   cin>>gender;
   cout<<"\t\t\t\t\t\t\t\t\nEnter your Department:";
   cin>>Department;
-  cout<<"\t\t\t\t\t\t\t\t\nEnter your Email:";
+  cout<<"\t\t\t\t\t\t\t\t\nEnter your Email(Excluded spaces):";
   cin>>Email;
   cout<<"\t\t\t\t\t\t\t\t\nEnter your password:";
   cin>>pass;
